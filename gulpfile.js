@@ -43,3 +43,19 @@ gulp.task('umd', function() {
         }))
         .pipe(gulp.dest('./dist/'));
 });
+
+gulp.task('umdify', function(){
+    var fs = require('fs-extra')
+    var glob = require('glob');
+    var umdify = require('umdify');
+    var files = glob.sync(src);
+    files.forEach(function(file) {
+        var contents = fs.readFileSync(file, 'utf8');
+        try{
+            contents = umdify(contents);
+        }catch(e){
+        }
+        var dest = file.replace(/.\/src\//, './dist/umdify/');
+        fs.outputFileSync(dest, contents);
+    });
+});

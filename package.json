@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/hmhao/test-amd-2-umd#readme",
   "devDependencies": {
+    "fs-extra": "^2.0.0",
+    "glob": "^7.1.1",
     "gulp": "^3.9.1",
-    "gulp-umd": "^0.2.0"
+    "gulp-umd": "^0.2.0",
+    "umdify": "^0.1.0"
   }
 }
