@@ -8,8 +8,6 @@
   }
 }(this, function() {
 
-define(function() 
-{
 
 	var D = function() {
 
@@ -18,7 +16,6 @@ define(function()
 	};
 
 	return D;
-});
 
 return D;
 }));

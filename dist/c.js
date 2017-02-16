@@ -1,15 +1,13 @@
 ;(function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    define([], factory);
+    define(['jquery', 'vendor/inherit'], factory);
   } else if (typeof exports === 'object') {
-    module.exports = factory();
+    module.exports = factory(require('jquery'), require('vendor/inherit'));
   } else {
-    root.C = factory();
+    root.C = factory(root.jquery, root.inherit);
   }
-}(this, function() {
+}(this, function($, inherit) {
 
-define(['jquery', 'vendor/inherit'], function($, inherit) 
-{
 
   
 	var C = inherit(new function() {
@@ -19,9 +17,6 @@ define(['jquery', 'vendor/inherit'], function($, inherit)
 	});
 
 	return C;
-}
-);
-
 
 return C;
 }));

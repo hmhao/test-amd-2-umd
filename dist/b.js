@@ -8,10 +8,6 @@
   }
 }(this, function() {
 
-
-define([],function() 
-
-{
 	var B = inherit(new function() {
 
 
@@ -21,9 +17,6 @@ define([],function()
 	return B;
 
 
-}
 
-
-)
 return B;
 }));
