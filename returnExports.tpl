@@ -4,22 +4,12 @@
     //in another project. That other project will only
     //see this AMD call, not the internal modules in
     //the closure below.
-    define([], factory);
+    define(<%= amd %>, factory);
   } else {
     //Browser globals case. Just assign the
     //result to a property on the global.
-    root.B = factory();
+    root.<%= namespace %> = factory(<%= global %>);
   }
-}(this, function() {
-
-	var B = inherit(new function() {
-
-
-
-	});
-
-	return B;
-
-
-
+}(this, function(<%= param %>) {
+<%= contents %>
 }));

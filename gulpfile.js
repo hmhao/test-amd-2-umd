@@ -30,7 +30,8 @@ gulp.task('umd', function() {
                 }else{
                     return [];
                 }
-            }
+            },
+            templateSource: require('fs').readFileSync('./returnExports.tpl')
         }))
         .pipe(gulp.dest('./dist/'));
 });
