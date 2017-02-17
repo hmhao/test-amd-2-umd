@@ -25,6 +25,6 @@
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-umd": "^0.2.0",
-    "umdify": "^0.1.0"
+    "umdify": "git+https://github.com/hmhao/umdify.git"
   }
 }
